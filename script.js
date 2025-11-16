@@ -1,12 +1,12 @@
 // Sample vlog data
 const vlogsData = {
     1: {
-        title: "Introduction to Neural Networks",
-        subtitle: "Understanding the building blocks of modern AI",
-        date: "November 10, 2025",
-        category: "Machine Learning",
-        readTime: "8 min read",
-        tags: ["#MachineLearning", "#NeuralNetworks", "#AI", "#DeepLearning"],
+        title: "How LLMs Generate Text",
+        subtitle: "A deep dive into tokenization, logits, and sampling strategies",
+        date: "November 16, 2025",
+        category: "Large Language Models",
+        readTime: "12 min read",
+        tags: ["#LLM", "#TextGeneration", "#Tokenization", "#AI", "#MachineLearning"],
         content: `
             <section class="video-container">
                 <div class="video-placeholder">

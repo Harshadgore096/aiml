@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI/ML Vlogs - Tech Journey</title>
+    <title>AI/ML Blogs - Tech Journey</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +14,20 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h1>AI/ML Vlogs</h1>
+                <h1>AI/ML Blogs</h1>
                 <p class="subtitle">Exploring the Future of Technology</p>
             </div>
             
             <div class="search-box">
-                <input type="text" id="searchVlogs" placeholder="Search vlogs...">
+                <input type="text" id="searchVlogs" placeholder="Search blogs...">
             </div>
 
             <div class="vlogs-list">
                 <div class="vlog-item active" data-vlog="1">
                     <div class="vlog-number">01</div>
                     <div class="vlog-info">
-                        <h3>Introduction to Neural Networks</h3>
-                        <span class="vlog-date">Nov 10, 2025</span>
+                        <h3>How LLMs Generate Text</h3>
+                        <span class="vlog-date">Nov 16, 2025</span>
                     </div>
                 </div>
 
@@ -77,87 +77,234 @@
         <main class="main-content">
             <div class="content-header">
                 <div class="breadcrumb">
-                    <span>Home</span> / <span>Vlogs</span> / <span class="current-vlog">Neural Networks</span>
+                    <span>Home</span> / <span>Blogs</span> / <span class="current-vlog">How LLMs Generate Text</span>
                 </div>
                 <div class="actions">
-                    <button class="btn-secondary">Share</button>
-                    <button class="btn-primary">Subscribe</button>
+                    <a href="https://colab.research.google.com/github/Harshadgore096/aiml/blob/master/howLLmgenerateText.ipynb" target="_blank" class="btn-colab">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z" fill="#F9AB00"/>
+                            <path d="M7 10.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5zm10 0c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z" fill="#F9AB00"/>
+                        </svg>
+                        Open in Colab
+                    </a>
                 </div>
             </div>
 
             <article class="vlog-content" id="vlogContent">
                 <div class="vlog-header">
                     <div class="vlog-meta">
-                        <span class="badge">Machine Learning</span>
-                        <span class="reading-time">8 min read</span>
+                        <span class="badge">Large Language Models</span>
+                        <span class="reading-time">15 min read</span>
                     </div>
-                    <h1 class="vlog-title">Introduction to Neural Networks</h1>
-                    <p class="vlog-subtitle">Understanding the building blocks of modern AI</p>
+                    <h1 class="vlog-title">How LLMs Generate Text</h1>
+                    <p class="vlog-subtitle">A deep dive into tokenization, logits, and sampling strategies</p>
                     <div class="author-info">
                         <div class="author-avatar">HG</div>
                         <div class="author-details">
                             <p class="author-name">Harshad Gore</p>
-                            <p class="publish-date">Published on November 10, 2025</p>
+                            <p class="publish-date">Published on November 16, 2025</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="vlog-body">
-                    <section class="video-container">
-                        <div class="video-placeholder">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="40" cy="40" r="40" fill="url(#gradient)"/>
-                                <path d="M30 25L55 40L30 55V25Z" fill="white"/>
-                                <defs>
-                                    <linearGradient id="gradient" x1="0" y1="0" x2="80" y2="80">
-                                        <stop offset="0%" style="stop-color:#667eea"/>
-                                        <stop offset="100%" style="stop-color:#764ba2"/>
-                                    </linearGradient>
-                                </defs>
-                            </svg>
-                            <p>Video Tutorial: Neural Network Basics</p>
-                        </div>
+                    <section class="hero-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="AI Text Generation Visualization" />
                     </section>
 
                     <section class="content-section">
-                        <h2>What Are Neural Networks?</h2>
-                        <p>Neural networks are computational models inspired by the human brain's structure and function. They consist of interconnected nodes (neurons) organized in layers that process and transform data to learn patterns and make predictions.</p>
+                        <h2>Introduction</h2>
+                        <p>Ever wondered how ChatGPT, Claude, or other language models generate text? In this comprehensive tutorial, we'll demystify the entire process by building a text generator from scratch using the SmolLM2 model. By the end, you'll understand tokenization, logits, sampling strategies, and how to generate creative text!</p>
                         
                         <div class="highlight-box">
-                            <h4>Key Concept</h4>
-                            <p>A neural network learns by adjusting the weights of connections between neurons through a process called backpropagation.</p>
+                            <h4>Complete Python Notebook</h4>
+                            <p>This blog includes all the code from our Python notebook. You can run it yourself by clicking "Open in Colab" above!</p>
                         </div>
                     </section>
 
                     <section class="content-section">
-                        <h2>Architecture Components</h2>
-                        <ul class="custom-list">
-                            <li><strong>Input Layer:</strong> Receives the raw data</li>
-                            <li><strong>Hidden Layers:</strong> Process and transform the data</li>
-                            <li><strong>Output Layer:</strong> Produces the final prediction</li>
-                            <li><strong>Activation Functions:</strong> Introduce non-linearity</li>
-                        </ul>
+                        <h2>Step 1: Setting Up the Model</h2>
+                        <p>First, let's import the necessary libraries and load our language model. We'll use SmolLM2-135M-Instruct, a lightweight but powerful model perfect for learning.</p>
+                        
+                        <div class="code-block">
+                            <pre><code>from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model_name = 'HuggingFaceTB/SmolLM2-135M-Instruct'
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)</code></pre>
+                        </div>
                     </section>
 
                     <section class="content-section">
-                        <h2>Code Example</h2>
-                        <div class="code-block">
-                            <pre><code>import numpy as np
+                        <h2>Step 2: Understanding Tokenization</h2>
+                        <p>Tokenization is a fundamental step in text processing and NLP. A tokenizer breaks down text into smaller, meaningful units called "tokens." Think of it like taking a sentence and splitting it into individual words, or even smaller pieces.</p>
+                        
+                        <p>For example, the sentence "Hello, world!" might be tokenized into:</p>
+                        <ul class="custom-list">
+                            <li>["Hello", ",", "world", "!"] (word-level tokens)</li>
+                            <li>Or even ["Hel", "lo", ",", "wor", "ld", "!"] (subword tokens)</li>
+                        </ul>
 
-class NeuralNetwork:
-    def __init__(self, input_size, hidden_size, output_size):
-        self.W1 = np.random.randn(input_size, hidden_size)
-        self.W2 = np.random.randn(hidden_size, output_size)
+                        <div class="code-block">
+                            <pre><code>text = "My Name is Harshad "
+tokens = tokenizer(text)
+tokens
+# Output: {'input_ids': [1926, 3973, 310, 4095, 845, 328], 'attention_mask': [1, 1, 1, 1, 1, 1]}</code></pre>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4>Understanding the Output</h4>
+                            <p><strong>input_ids:</strong> These are the numerical IDs that represent each token - this is what the model actually processes<br>
+                            <strong>attention_mask:</strong> Other inputs required for the model (we can ignore this for now)</p>
+                        </div>
+
+                        <div class="code-block">
+                            <pre><code># To get back token strings from the tokens
+[tokenizer.decode([token_id]) for token_id in tokens['input_ids']]
+# Output: ['my', ' name', ' is', ' harsh', 'ad']</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Why Subword Tokenization?</h2>
+                        <p>You might wonder why "name" becomes ' name' (with a space) or why "harshad" is split into ' harsh' and 'ad'. Modern tokenizers use <strong>subword tokenization</strong> — they learn common patterns from millions of texts.</p>
+                        
+                        <ul class="custom-list">
+                            <li>A space before a word often signals it's a separate concept, so the tokenizer treats ' name' as one unit</li>
+                            <li>Rare or less frequent words like "harshad" are split into smaller meaningful chunks (' harsh' + 'ad')</li>
+                            <li>This helps the model understand word boundaries, context, and rare words much better than just splitting on spaces</li>
+                        </ul>
+
+                        <div class="code-block">
+                            <pre><code>print(tokenizer.special_tokens_map)
+print(tokenizer.vocab_size)
+# Vocabulary size: 49,152 tokens</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Step 3: From Words to Numbers - Understanding Logits</h2>
+                        <p>The Model's Internal Thinking Process! When you see logits numbers, you're literally looking at the model's "thoughts." Each position in our input gets its own set of predictions. The model isn't just guessing the next word - it's considering what could come after EVERY position. But for text generation, we only care about the very last position.</p>
+                        
+                        <div class="code-block">
+                            <pre><code>import torch
+
+# Convert tokens to PyTorch tensor (the model needs this format)
+input_tensor = torch.tensor([tokens['input_ids']])
+op = model(input_tensor)</code></pre>
+                        </div>
+
+                        <p>We have to focus on <strong>logits</strong> for now and can ignore all other parts of the output.</p>
+
+                        <div class="code-block">
+                            <pre><code>op.logits.shape
+# Output: torch.Size([1, 5, 49152])</code></pre>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4>Why So Many Numbers?</h4>
+                            <p>49,152 might seem like overkill, but remember - the model has to consider EVERY possible token it knows. This includes common words like "happy", rare words like "sesquipedalian", numbers, punctuation, and even tokens from other languages. Most will have very low scores, but the model still evaluates them all.</p>
+                        </div>
+
+                        <div class="code-block">
+                            <pre><code>print(f"Logits shape: {op.logits.shape}")
+print("Shape breakdown: [Batch_size, Sequence_length, Vocab_size]")
+print(f"[{op.logits.shape[0]}, {op.logits.shape[1]}, {op.logits.shape[2]}]")
+print(f"- Batch: {op.logits.shape[0]} text(s) processed")
+print(f"- Sequence: {op.logits.shape[1]} tokens in input")
+print(f"- Vocab: {op.logits.shape[2]:,} possible next tokens")</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Step 4: From Raw Scores to Predictions</h2>
+                        <p>Now let's convert logits to probabilities using softmax and understand why we can't just pick the highest logit every time. We'll demonstrate the difference between greedy selection and sampling.</p>
+                        
+                        <div class="code-block">
+                            <pre><code># Extract logits for the last token position (where next token will be predicted)
+last_token_logits = op.logits[:, -1, :]  # Shape: [1, 49152]
+
+# Find the token with highest probability (greedy selection)
+predicted_token_id = last_token_logits.argmax(dim=-1)
+
+# Convert the ID to token
+next_token = tokenizer.decode(predicted_token_id)
+
+print(f"predicted_token_id : {predicted_token_id.item()}")
+print(f"next token : `{next_token}`")</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Step 5: The Art of Selection - Why Randomness Matters</h2>
+                        <p>So far, we've done text to predictions. But here's the thing - if we always select the token with the highest logit score (greedy selection), our model becomes predictable and boring. It's like having a conversation with someone who always gives the most obvious response!</p>
+                        
+                        <p>This is where <strong>sampling</strong> comes in. Instead of always picking the #1 choice, large language models introduce some randomness by selecting from the top-K highest scoring tokens, where K is a number we can control.</p>
+
+                        <div class="highlight-box">
+                            <h4>Key Parameters</h4>
+                            <p><strong>Temperature:</strong> Like a creativity dial (0.1 = very predictable, 1.5 = very creative)<br>
+                            <strong>Top-k:</strong> Only consider the k most likely tokens - saves computation and improves quality</p>
+                        </div>
+
+                        <div class="code-block">
+                            <pre><code>import torch.nn.functional as F
+
+def generate_next_token(text, temperature=1.0, top_k=50):
+    """Simple function to show one step of text generation"""
+    # Tokenize input
+    tokens = tokenizer(text, return_tensors="pt")
     
-    def forward(self, X):
-        self.z1 = np.dot(X, self.W1)
-        self.a1 = self.sigmoid(self.z1)
-        self.z2 = np.dot(self.a1, self.W2)
-        output = self.sigmoid(self.z2)
-        return output
+    # Get model predictions
+    with torch.no_grad():
+        outputs = model(**tokens)
     
-    def sigmoid(self, x):
-        return 1 / (1 + np.exp(-x))</code></pre>
+    # Get logits for next token prediction
+    next_token_logits = outputs.logits[0, -1, :] / temperature
+    
+    # Get top-k most likely tokens
+    top_logits, top_indices = torch.topk(next_token_logits, top_k)
+    
+    # Convert to probabilities and sample
+    probs = F.softmax(top_logits, dim=-1)
+    
+    # Randomly sample from all the probabilities
+    next_token_idx = torch.multinomial(probs, 1)
+    next_token_id = top_indices[next_token_idx]
+    
+    return tokenizer.decode(next_token_id)</code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <pre><code># Try generating the same text 6 times with temperature=0.7
+[generate_next_token("my name is harshad", 0.7) for _ in range(6)]
+# You'll get different results each time!</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Step 6: Putting It All Together - Building Our Generator</h2>
+                        <p>We have to add new tokens to the end of the text and pass it back to the model iteratively. This is how language models generate complete sentences and paragraphs!</p>
+                        
+                        <div class="code-block">
+                            <pre><code>def generate_text(prompt, max_tokens=10):
+    current_text = prompt
+    for i in range(max_tokens):
+        next_token = generate_next_token(current_text, temperature=0.7)
+        current_text += next_token
+        print(f"Step {i+1}: {current_text}")
+    return current_text</code></pre>
+                        </div>
+
+                        <div class="code-block">
+                            <pre><code># Generate text!
+result = generate_text(text, 4)
+# Watch as it builds the text step by step!</code></pre>
+                        </div>
+
+                        <div class="highlight-box">
+                            <h4>🎉 That's It!</h4>
+                            <p>That's all - it's just that simple! You've now built a complete text generation system from scratch. The same principles power ChatGPT, Claude, and all other language models, just with more sophisticated models and additional techniques.</p>
                         </div>
                     </section>
 
@@ -165,36 +312,57 @@ class NeuralNetwork:
                         <h2>Real-World Applications</h2>
                         <div class="grid-cards">
                             <div class="card">
-                                <h3>🖼️ Image Recognition</h3>
-                                <p>Classify images, detect objects, and recognize faces</p>
+                                <h3>💬 Chatbots</h3>
+                                <p>Power conversational AI like ChatGPT and Claude with text generation</p>
                             </div>
                             <div class="card">
-                                <h3>💬 Text Analysis</h3>
-                                <p>Sentiment analysis, translation, and text generation</p>
+                                <h3>✍️ Content Writing</h3>
+                                <p>Generate articles, emails, and creative content automatically</p>
                             </div>
                             <div class="card">
-                                <h3>🎮 Game Playing</h3>
-                                <p>Train agents to play complex games like Chess and Go</p>
+                                <h3>🔧 Code Completion</h3>
+                                <p>Help developers write code faster with AI assistants like GitHub Copilot</p>
                             </div>
                             <div class="card">
-                                <h3>🏥 Medical Diagnosis</h3>
-                                <p>Detect diseases from medical imaging and patient data</p>
+                                <h3>🌐 Translation</h3>
+                                <p>Translate text between different languages naturally</p>
                             </div>
                         </div>
                     </section>
 
                     <section class="content-section">
-                        <h2>Next Steps</h2>
-                        <p>In the next vlog, we'll dive deeper into deep learning fundamentals and explore how multiple layers enable neural networks to learn complex patterns. Stay tuned!</p>
+                        <h2>Key Takeaways</h2>
+                        <ul class="custom-list">
+                            <li><strong>Tokenization:</strong> Breaking text into subword units that capture meaning and context</li>
+                            <li><strong>Logits:</strong> Raw prediction scores for every possible next token (49,152 in our case!)</li>
+                            <li><strong>Greedy vs Sampling:</strong> Always picking the best vs introducing controlled randomness</li>
+                            <li><strong>Temperature:</strong> Controls creativity - lower is more predictable, higher is more creative</li>
+                            <li><strong>Top-k Sampling:</strong> Only consider the k most likely tokens to improve quality</li>
+                            <li><strong>Iterative Generation:</strong> Generate one token at a time, adding it back to the input</li>
+                        </ul>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>What's Next?</h2>
+                        <p>Now that you understand the fundamentals of text generation, you can explore:</p>
+                        <ul class="custom-list">
+                            <li><strong>Nucleus Sampling (top-p):</strong> Another sampling strategy that considers cumulative probability</li>
+                            <li><strong>Beam Search:</strong> Explore multiple generation paths simultaneously</li>
+                            <li><strong>Fine-tuning:</strong> Customize models for specific tasks and domains</li>
+                            <li><strong>Prompt Engineering:</strong> Craft better inputs to get better outputs</li>
+                            <li><strong>Larger Models:</strong> Experiment with bigger models like GPT-2, Llama, or Mistral</li>
+                        </ul>
+                        <p>Happy coding and keep exploring! 🚀</p>
                     </section>
                 </div>
 
                 <div class="vlog-footer">
                     <div class="tags">
-                        <span class="tag">#MachineLearning</span>
-                        <span class="tag">#NeuralNetworks</span>
+                        <span class="tag">#LLM</span>
+                        <span class="tag">#TextGeneration</span>
+                        <span class="tag">#Tokenization</span>
                         <span class="tag">#AI</span>
-                        <span class="tag">#DeepLearning</span>
+                        <span class="tag">#MachineLearning</span>
                     </div>
                     <div class="navigation-buttons">
                         <button class="nav-btn" disabled>← Previous Vlog</button>

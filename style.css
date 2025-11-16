@@ -174,7 +174,8 @@ body {
     flex: 1;
     margin-left: 350px;
     padding: 2rem;
-    max-width: 1200px;
+    max-width: calc(100% - 350px);
+    width: 100%;
 }
 
 .content-header {
@@ -209,6 +210,33 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 0.9rem;
+}
+
+.btn-colab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: 2px solid #F9AB00;
+    background: transparent;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.btn-colab:hover {
+    background: #F9AB00;
+    color: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(249, 171, 0, 0.4);
+}
+
+.btn-colab svg {
+    flex-shrink: 0;
 }
 
 .btn-primary {
@@ -315,6 +343,21 @@ body {
 .vlog-body {
     font-size: 1.0625rem;
     line-height: 1.8;
+}
+
+.hero-image {
+    margin-bottom: 3rem;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 500px;
 }
 
 .content-section {
@@ -528,6 +571,7 @@ body {
     
     .main-content {
         margin-left: 280px;
+        max-width: calc(100% - 280px);
     }
 }
 
@@ -536,6 +580,7 @@ body {
         position: fixed;
         transform: translateX(-100%);
         transition: transform 0.3s ease;
+        z-index: 1000;
     }
     
     .sidebar.active {
@@ -545,6 +590,7 @@ body {
     .main-content {
         margin-left: 0;
         padding: 1rem;
+        max-width: 100%;
     }
     
     .vlog-content {
@@ -567,5 +613,14 @@ body {
     
     .grid-cards {
         grid-template-columns: 1fr;
+    }
+    
+    .code-block {
+        font-size: 0.75rem;
+        padding: 1rem;
+    }
+    
+    .code-block pre {
+        font-size: 0.75rem;
     }
 }
