@@ -502,8 +502,7 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
-    max-height: 500px;
+    object-fit: contain;
 }
 
 .content-section {
