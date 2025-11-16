@@ -1,336 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI/ML Blogs - Tech Journey</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>AI/ML Blogs - Home</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>AI/ML Blogs - Home</title>
-            <link rel="stylesheet" href="style.css">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-        </head>
-        <body>
-            <div class="container">
-                <aside class="sidebar">
-                    <div class="sidebar-header">
-                        <h1>AI/ML Blogs</h1>
-                        <p class="subtitle">Exploring the Future of Technology</p>
-                    </div>
-                    <div class="search-box">
-                        <input type="text" id="searchVlogs" placeholder="Search blogs...">
-                    </div>
-                    <div class="vlogs-list" id="blogsList">
-                        <a class="vlog-item" href="blog-how-llms-generate-text.html">
-                            <div class="vlog-number">01</div>
-                            <div class="vlog-info">
-                                <h3>How LLMs Generate Text</h3>
-                                <span class="vlog-date">Nov 16, 2025</span>
-                            </div>
-                        </a>
-                        <a class="vlog-item" href="blog-deep-learning-fundamentals.html">
-                            <div class="vlog-number">02</div>
-                            <div class="vlog-info">
-                                <h3>Deep Learning Fundamentals</h3>
-                                <span class="vlog-date">Nov 12, 2025</span>
-                            </div>
-                        </a>
-                        <a class="vlog-item" href="blog-computer-vision-cnns.html">
-                            <div class="vlog-number">03</div>
-                            <div class="vlog-info">
-                                <h3>Computer Vision & CNNs</h3>
-                                <span class="vlog-date">Nov 14, 2025</span>
-                            </div>
-                        </a>
-                        <a class="vlog-item" href="blog-natural-language-processing.html">
-                            <div class="vlog-number">04</div>
-                            <div class="vlog-info">
-                                <h3>Natural Language Processing</h3>
-                                <span class="vlog-date">Nov 15, 2025</span>
-                            </div>
-                        </a>
-                        <a class="vlog-item" href="blog-transformer-architecture.html">
-                            <div class="vlog-number">05</div>
-                            <div class="vlog-info">
-                                <h3>Transformer Architecture</h3>
-                                <span class="vlog-date">Nov 16, 2025</span>
-                            </div>
-                        </a>
-                        <a class="vlog-item" href="blog-reinforcement-learning-basics.html">
-                            <div class="vlog-number">06</div>
-                            <div class="vlog-info">
-                                <h3>Reinforcement Learning Basics</h3>
-                                <span class="vlog-date">Coming Soon</span>
-                            </div>
-                        </a>
-                    </div>
-                </aside>
-                <main class="main-content">
-                    <div class="content-header">
-                        <div class="breadcrumb"><span>Home</span> / <span>Blogs</span></div>
-                        <div class="actions">
-                            <a href="https://colab.research.google.com/github/Harshadgore096/aiml/blob/master/howLLmgenerateText.ipynb" target="_blank" class="btn-colab">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z" fill="#F9AB00"/>
-                                    <path d="M7 10.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5zm10 0c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z" fill="#F9AB00"/>
-                                </svg>
-                                Open Notebook in Colab
-                            </a>
-                        </div>
-                    </div>
-                    <article class="vlog-content">
-                        <div class="vlog-header">
-                            <h1 class="vlog-title">Welcome to AI/ML Blogs</h1>
-                            <p class="vlog-subtitle">Select a blog from the left to read the full article.</p>
-                        </div>
-                        <div class="vlog-body">
-                            <section class="content-section">
-                                <h2>About This Collection</h2>
-                                <p>This site hosts a growing collection of practical AI & ML blog posts. Each article focuses on clarity, code, and real-world intuition. Start with the first post <strong>"How LLMs Generate Text"</strong> for a complete walkthrough from tokenization to sampling.</p>
-                            </section>
-                            <section class="content-section">
-                                <h2>Featured Post</h2>
-                                <div class="highlight-box">
-                                    <h4>How LLMs Generate Text</h4>
-                                    <p>Dive deep into the internals of large language models: tokens, logits, temperature, top-k sampling, and iterative generation. Includes the full runnable notebook.</p>
-                                    <p><a href="blog-how-llms-generate-text.html" class="btn-primary" style="display:inline-block;margin-top:0.75rem;text-decoration:none;">Read Full Blog →</a></p>
-                                </div>
-                            </section>
-                        </div>
-                    </article>
-                </main>
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>AI/ML Blogs</h1>
+                <p class="subtitle">Exploring the Future of Technology</p>
             </div>
-            <script src="script.js"></script>
-        </body>
-        </html>
-
-                        <div class="code-block">
-                            <pre><code># To get back token strings from the tokens
-[tokenizer.decode([token_id]) for token_id in tokens['input_ids']]
-# Output: ['my', ' name', ' is', ' harsh', 'ad']</code></pre>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Why Subword Tokenization?</h2>
-                        <p>You might wonder why "name" becomes ' name' (with a space) or why "harshad" is split into ' harsh' and 'ad'. Modern tokenizers use <strong>subword tokenization</strong> — they learn common patterns from millions of texts.</p>
-                        
-                        <ul class="custom-list">
-                            <li>A space before a word often signals it's a separate concept, so the tokenizer treats ' name' as one unit</li>
-                            <li>Rare or less frequent words like "harshad" are split into smaller meaningful chunks (' harsh' + 'ad')</li>
-                            <li>This helps the model understand word boundaries, context, and rare words much better than just splitting on spaces</li>
-                        </ul>
-
-                        <div class="code-block">
-                            <pre><code>print(tokenizer.special_tokens_map)
-print(tokenizer.vocab_size)
-# Vocabulary size: 49,152 tokens</code></pre>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Step 3: From Words to Numbers - Understanding Logits</h2>
-                        <p>The Model's Internal Thinking Process! When you see logits numbers, you're literally looking at the model's "thoughts." Each position in our input gets its own set of predictions. The model isn't just guessing the next word - it's considering what could come after EVERY position. But for text generation, we only care about the very last position.</p>
-                        
-                        <div class="code-block">
-                            <pre><code>import torch
-
-# Convert tokens to PyTorch tensor (the model needs this format)
-input_tensor = torch.tensor([tokens['input_ids']])
-op = model(input_tensor)</code></pre>
-                        </div>
-
-                        <p>We have to focus on <strong>logits</strong> for now and can ignore all other parts of the output.</p>
-
-                        <div class="code-block">
-                            <pre><code>op.logits.shape
-# Output: torch.Size([1, 5, 49152])</code></pre>
-                        </div>
-
-                        <div class="highlight-box">
-                            <h4>Why So Many Numbers?</h4>
-                            <p>49,152 might seem like overkill, but remember - the model has to consider EVERY possible token it knows. This includes common words like "happy", rare words like "sesquipedalian", numbers, punctuation, and even tokens from other languages. Most will have very low scores, but the model still evaluates them all.</p>
-                        </div>
-
-                        <div class="code-block">
-                            <pre><code>print(f"Logits shape: {op.logits.shape}")
-print("Shape breakdown: [Batch_size, Sequence_length, Vocab_size]")
-print(f"[{op.logits.shape[0]}, {op.logits.shape[1]}, {op.logits.shape[2]}]")
-print(f"- Batch: {op.logits.shape[0]} text(s) processed")
-print(f"- Sequence: {op.logits.shape[1]} tokens in input")
-print(f"- Vocab: {op.logits.shape[2]:,} possible next tokens")</code></pre>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Step 4: From Raw Scores to Predictions</h2>
-                        <p>Now let's convert logits to probabilities using softmax and understand why we can't just pick the highest logit every time. We'll demonstrate the difference between greedy selection and sampling.</p>
-                        
-                        <div class="code-block">
-                            <pre><code># Extract logits for the last token position (where next token will be predicted)
-last_token_logits = op.logits[:, -1, :]  # Shape: [1, 49152]
-
-# Find the token with highest probability (greedy selection)
-predicted_token_id = last_token_logits.argmax(dim=-1)
-
-# Convert the ID to token
-next_token = tokenizer.decode(predicted_token_id)
-
-print(f"predicted_token_id : {predicted_token_id.item()}")
-print(f"next token : `{next_token}`")</code></pre>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Step 5: The Art of Selection - Why Randomness Matters</h2>
-                        <p>So far, we've done text to predictions. But here's the thing - if we always select the token with the highest logit score (greedy selection), our model becomes predictable and boring. It's like having a conversation with someone who always gives the most obvious response!</p>
-                        
-                        <p>This is where <strong>sampling</strong> comes in. Instead of always picking the #1 choice, large language models introduce some randomness by selecting from the top-K highest scoring tokens, where K is a number we can control.</p>
-
-                        <div class="highlight-box">
-                            <h4>Key Parameters</h4>
-                            <p><strong>Temperature:</strong> Like a creativity dial (0.1 = very predictable, 1.5 = very creative)<br>
-                            <strong>Top-k:</strong> Only consider the k most likely tokens - saves computation and improves quality</p>
-                        </div>
-
-                        <div class="code-block">
-                            <pre><code>import torch.nn.functional as F
-
-def generate_next_token(text, temperature=1.0, top_k=50):
-    """Simple function to show one step of text generation"""
-    # Tokenize input
-    tokens = tokenizer(text, return_tensors="pt")
-    
-    # Get model predictions
-    with torch.no_grad():
-        outputs = model(**tokens)
-    
-    # Get logits for next token prediction
-    next_token_logits = outputs.logits[0, -1, :] / temperature
-    
-    # Get top-k most likely tokens
-    top_logits, top_indices = torch.topk(next_token_logits, top_k)
-    
-    # Convert to probabilities and sample
-    probs = F.softmax(top_logits, dim=-1)
-    
-    # Randomly sample from all the probabilities
-    next_token_idx = torch.multinomial(probs, 1)
-    next_token_id = top_indices[next_token_idx]
-    
-    return tokenizer.decode(next_token_id)</code></pre>
-                        </div>
-
-                        <div class="code-block">
-                            <pre><code># Try generating the same text 6 times with temperature=0.7
-[generate_next_token("my name is harshad", 0.7) for _ in range(6)]
-# You'll get different results each time!</code></pre>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Step 6: Putting It All Together - Building Our Generator</h2>
-                        <p>We have to add new tokens to the end of the text and pass it back to the model iteratively. This is how language models generate complete sentences and paragraphs!</p>
-                        
-                        <div class="code-block">
-                            <pre><code>def generate_text(prompt, max_tokens=10):
-    current_text = prompt
-    for i in range(max_tokens):
-        next_token = generate_next_token(current_text, temperature=0.7)
-        current_text += next_token
-        print(f"Step {i+1}: {current_text}")
-    return current_text</code></pre>
-                        </div>
-
-                        <div class="code-block">
-                            <pre><code># Generate text!
-result = generate_text(text, 4)
-# Watch as it builds the text step by step!</code></pre>
-                        </div>
-
-                        <div class="highlight-box">
-                            <h4>🎉 That's It!</h4>
-                            <p>That's all - it's just that simple! You've now built a complete text generation system from scratch. The same principles power ChatGPT, Claude, and all other language models, just with more sophisticated models and additional techniques.</p>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Real-World Applications</h2>
-                        <div class="grid-cards">
-                            <div class="card">
-                                <h3>💬 Chatbots</h3>
-                                <p>Power conversational AI like ChatGPT and Claude with text generation</p>
-                            </div>
-                            <div class="card">
-                                <h3>✍️ Content Writing</h3>
-                                <p>Generate articles, emails, and creative content automatically</p>
-                            </div>
-                            <div class="card">
-                                <h3>🔧 Code Completion</h3>
-                                <p>Help developers write code faster with AI assistants like GitHub Copilot</p>
-                            </div>
-                            <div class="card">
-                                <h3>🌐 Translation</h3>
-                                <p>Translate text between different languages naturally</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Key Takeaways</h2>
-                        <ul class="custom-list">
-                            <li><strong>Tokenization:</strong> Breaking text into subword units that capture meaning and context</li>
-                            <li><strong>Logits:</strong> Raw prediction scores for every possible next token (49,152 in our case!)</li>
-                            <li><strong>Greedy vs Sampling:</strong> Always picking the best vs introducing controlled randomness</li>
-                            <li><strong>Temperature:</strong> Controls creativity - lower is more predictable, higher is more creative</li>
-                            <li><strong>Top-k Sampling:</strong> Only consider the k most likely tokens to improve quality</li>
-                            <li><strong>Iterative Generation:</strong> Generate one token at a time, adding it back to the input</li>
-                        </ul>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>What's Next?</h2>
-                        <p>Now that you understand the fundamentals of text generation, you can explore:</p>
-                        <ul class="custom-list">
-                            <li><strong>Nucleus Sampling (top-p):</strong> Another sampling strategy that considers cumulative probability</li>
-                            <li><strong>Beam Search:</strong> Explore multiple generation paths simultaneously</li>
-                            <li><strong>Fine-tuning:</strong> Customize models for specific tasks and domains</li>
-                            <li><strong>Prompt Engineering:</strong> Craft better inputs to get better outputs</li>
-                            <li><strong>Larger Models:</strong> Experiment with bigger models like GPT-2, Llama, or Mistral</li>
-                        </ul>
-                        <p>Happy coding and keep exploring! 🚀</p>
-                    </section>
-                </div>
-
-                <div class="vlog-footer">
-                    <div class="tags">
-                        <span class="tag">#LLM</span>
-                        <span class="tag">#TextGeneration</span>
-                        <span class="tag">#Tokenization</span>
-                        <span class="tag">#AI</span>
-                        <span class="tag">#MachineLearning</span>
+            <div class="search-box">
+                <input type="text" id="searchVlogs" placeholder="Search blogs..." />
+            </div>
+            <div class="vlogs-list" id="blogsList">
+                <a class="vlog-item" href="blog-how-llms-generate-text.html">
+                    <div class="vlog-number">01</div>
+                    <div class="vlog-info">
+                        <h3>How LLMs Generate Text</h3>
+                        <span class="vlog-date">Nov 16, 2025</span>
                     </div>
-                    <div class="navigation-buttons">
-                        <button class="nav-btn" disabled>← Previous Vlog</button>
-                        <button class="nav-btn">Next Vlog →</button>
+                </a>
+                <a class="vlog-item" href="blog-deep-learning-fundamentals.html">
+                    <div class="vlog-number">02</div>
+                    <div class="vlog-info">
+                        <h3>Deep Learning Fundamentals</h3>
+                        <span class="vlog-date">Nov 12, 2025</span>
+                    </div>
+                </a>
+                <a class="vlog-item" href="blog-computer-vision-cnns.html">
+                    <div class="vlog-number">03</div>
+                    <div class="vlog-info">
+                        <h3>Computer Vision & CNNs</h3>
+                        <span class="vlog-date">Nov 14, 2025</span>
+                    </div>
+                </a>
+                <a class="vlog-item" href="blog-natural-language-processing.html">
+                    <div class="vlog-number">04</div>
+                    <div class="vlog-info">
+                        <h3>Natural Language Processing</h3>
+                        <span class="vlog-date">Nov 15, 2025</span>
+                    </div>
+                </a>
+                <a class="vlog-item" href="blog-transformer-architecture.html">
+                    <div class="vlog-number">05</div>
+                    <div class="vlog-info">
+                        <h3>Transformer Architecture</h3>
+                        <span class="vlog-date">Nov 16, 2025</span>
+                    </div>
+                </a>
+                <a class="vlog-item" href="blog-reinforcement-learning-basics.html">
+                    <div class="vlog-number">06</div>
+                    <div class="vlog-info">
+                        <h3>Reinforcement Learning Basics</h3>
+                        <span class="vlog-date">Coming Soon</span>
+                    </div>
+                </a>
+            </div>
+        </aside>
+        <main class="main-content">
+            <div class="home-hero">
+                <h1>Welcome to AI/ML Blogs</h1>
+                <p class="lead">Concise, practical explanations of modern Artificial Intelligence and Machine Learning — with runnable code and intuition-first diagrams.</p>
+                <div class="hero-actions">
+                    <a href="https://colab.research.google.com/github/Harshadgore096/aiml/blob/master/howLLmgenerateText.ipynb" target="_blank" class="btn-colab">Open LLM Notebook in Colab</a>
+                </div>
+            </div>
+            <section class="featured">
+                <div class="featured-inner">
+                    <div class="featured-text">
+                        <h2>Featured: How LLMs Generate Text</h2>
+                        <p>Step-by-step from raw prompt to tokens, logits, probabilities, sampling (temperature & top-k) and iterative generation — demystifying what happens inside large language models.</p>
+                        <a class="btn-primary" href="blog-how-llms-generate-text.html">Read Featured Blog →</a>
                     </div>
                 </div>
-            </article>
+            </section>
+            <section class="blog-grid">
+                <article class="blog-card">
+                    <h3><a href="blog-deep-learning-fundamentals.html">Deep Learning Fundamentals</a></h3>
+                    <p>Layers, representation learning, and why depth unlocks powerful feature hierarchies.</p>
+                </article>
+                <article class="blog-card">
+                    <h3><a href="blog-computer-vision-cnns.html">Computer Vision & CNNs</a></h3>
+                    <p>Convolutions, pooling and spatial awareness for image understanding.</p>
+                </article>
+                <article class="blog-card">
+                    <h3><a href="blog-natural-language-processing.html">Natural Language Processing</a></h3>
+                    <p>Core NLP tasks: classification, NER, translation, sentiment and more.</p>
+                </article>
+                <article class="blog-card">
+                    <h3><a href="blog-transformer-architecture.html">Transformer Architecture</a></h3>
+                    <p>Attention, multi-head design and positional encoding powering GPT & BERT.</p>
+                </article>
+                <article class="blog-card soon">
+                    <h3><a href="blog-reinforcement-learning-basics.html">Reinforcement Learning Basics</a></h3>
+                    <p>Agents, rewards and exploration strategies. (Coming soon)</p>
+                </article>
+            </section>
         </main>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
