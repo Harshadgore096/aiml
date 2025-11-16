@@ -2,23 +2,209 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Vlogs - Tech Journey</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>AI/ML Vlogs</h1>
+                <p class="subtitle">Exploring the Future of Technology</p>
+            </div>
+            
+            <div class="search-box">
+                <input type="text" id="searchVlogs" placeholder="Search vlogs...">
+            </div>
 
-<div class="sidebar">
-    <h2>Menu</h2>
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-</div>
+            <div class="vlogs-list">
+                <div class="vlog-item active" data-vlog="1">
+                    <div class="vlog-number">01</div>
+                    <div class="vlog-info">
+                        <h3>Introduction to Neural Networks</h3>
+                        <span class="vlog-date">Nov 10, 2025</span>
+                    </div>
+                </div>
 
-<div class="content">
-    <h1>Welcome to My Site</h1>
-    <p>This is a simple website with a sidebar, hosted on GitHub Pages.</p>
-</div>
+                <div class="vlog-item" data-vlog="2">
+                    <div class="vlog-number">02</div>
+                    <div class="vlog-info">
+                        <h3>Deep Learning Fundamentals</h3>
+                        <span class="vlog-date">Nov 12, 2025</span>
+                    </div>
+                </div>
 
+                <div class="vlog-item" data-vlog="3">
+                    <div class="vlog-number">03</div>
+                    <div class="vlog-info">
+                        <h3>Computer Vision & CNNs</h3>
+                        <span class="vlog-date">Nov 14, 2025</span>
+                    </div>
+                </div>
+
+                <div class="vlog-item" data-vlog="4">
+                    <div class="vlog-number">04</div>
+                    <div class="vlog-info">
+                        <h3>Natural Language Processing</h3>
+                        <span class="vlog-date">Nov 15, 2025</span>
+                    </div>
+                </div>
+
+                <div class="vlog-item" data-vlog="5">
+                    <div class="vlog-number">05</div>
+                    <div class="vlog-info">
+                        <h3>Transformer Architecture</h3>
+                        <span class="vlog-date">Nov 16, 2025</span>
+                    </div>
+                </div>
+
+                <div class="vlog-item" data-vlog="6">
+                    <div class="vlog-number">06</div>
+                    <div class="vlog-info">
+                        <h3>Reinforcement Learning Basics</h3>
+                        <span class="vlog-date">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="content-header">
+                <div class="breadcrumb">
+                    <span>Home</span> / <span>Vlogs</span> / <span class="current-vlog">Neural Networks</span>
+                </div>
+                <div class="actions">
+                    <button class="btn-secondary">Share</button>
+                    <button class="btn-primary">Subscribe</button>
+                </div>
+            </div>
+
+            <article class="vlog-content" id="vlogContent">
+                <div class="vlog-header">
+                    <div class="vlog-meta">
+                        <span class="badge">Machine Learning</span>
+                        <span class="reading-time">8 min read</span>
+                    </div>
+                    <h1 class="vlog-title">Introduction to Neural Networks</h1>
+                    <p class="vlog-subtitle">Understanding the building blocks of modern AI</p>
+                    <div class="author-info">
+                        <div class="author-avatar">HG</div>
+                        <div class="author-details">
+                            <p class="author-name">Harshad Gore</p>
+                            <p class="publish-date">Published on November 10, 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vlog-body">
+                    <section class="video-container">
+                        <div class="video-placeholder">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="40" fill="url(#gradient)"/>
+                                <path d="M30 25L55 40L30 55V25Z" fill="white"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0" y1="0" x2="80" y2="80">
+                                        <stop offset="0%" style="stop-color:#667eea"/>
+                                        <stop offset="100%" style="stop-color:#764ba2"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <p>Video Tutorial: Neural Network Basics</p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>What Are Neural Networks?</h2>
+                        <p>Neural networks are computational models inspired by the human brain's structure and function. They consist of interconnected nodes (neurons) organized in layers that process and transform data to learn patterns and make predictions.</p>
+                        
+                        <div class="highlight-box">
+                            <h4>Key Concept</h4>
+                            <p>A neural network learns by adjusting the weights of connections between neurons through a process called backpropagation.</p>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Architecture Components</h2>
+                        <ul class="custom-list">
+                            <li><strong>Input Layer:</strong> Receives the raw data</li>
+                            <li><strong>Hidden Layers:</strong> Process and transform the data</li>
+                            <li><strong>Output Layer:</strong> Produces the final prediction</li>
+                            <li><strong>Activation Functions:</strong> Introduce non-linearity</li>
+                        </ul>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Code Example</h2>
+                        <div class="code-block">
+                            <pre><code>import numpy as np
+
+class NeuralNetwork:
+    def __init__(self, input_size, hidden_size, output_size):
+        self.W1 = np.random.randn(input_size, hidden_size)
+        self.W2 = np.random.randn(hidden_size, output_size)
+    
+    def forward(self, X):
+        self.z1 = np.dot(X, self.W1)
+        self.a1 = self.sigmoid(self.z1)
+        self.z2 = np.dot(self.a1, self.W2)
+        output = self.sigmoid(self.z2)
+        return output
+    
+    def sigmoid(self, x):
+        return 1 / (1 + np.exp(-x))</code></pre>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Real-World Applications</h2>
+                        <div class="grid-cards">
+                            <div class="card">
+                                <h3>🖼️ Image Recognition</h3>
+                                <p>Classify images, detect objects, and recognize faces</p>
+                            </div>
+                            <div class="card">
+                                <h3>💬 Text Analysis</h3>
+                                <p>Sentiment analysis, translation, and text generation</p>
+                            </div>
+                            <div class="card">
+                                <h3>🎮 Game Playing</h3>
+                                <p>Train agents to play complex games like Chess and Go</p>
+                            </div>
+                            <div class="card">
+                                <h3>🏥 Medical Diagnosis</h3>
+                                <p>Detect diseases from medical imaging and patient data</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-section">
+                        <h2>Next Steps</h2>
+                        <p>In the next vlog, we'll dive deeper into deep learning fundamentals and explore how multiple layers enable neural networks to learn complex patterns. Stay tuned!</p>
+                    </section>
+                </div>
+
+                <div class="vlog-footer">
+                    <div class="tags">
+                        <span class="tag">#MachineLearning</span>
+                        <span class="tag">#NeuralNetworks</span>
+                        <span class="tag">#AI</span>
+                        <span class="tag">#DeepLearning</span>
+                    </div>
+                    <div class="navigation-buttons">
+                        <button class="nav-btn" disabled>← Previous Vlog</button>
+                        <button class="nav-btn">Next Vlog →</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
