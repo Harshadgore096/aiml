@@ -1,5 +1,5 @@
-// Minimal search and active link script for multi-page blog
-document.addEventListener('DOMContentLoaded', () => {
+// Dynamic sidebar loader + search + active link highlight
+function initSidebarFeatures() {
   const searchInput = document.getElementById('searchVlogs');
   const items = document.querySelectorAll('.vlog-item');
 
@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const currentPage = location.pathname.split('/').pop();
   items.forEach(item => {
-    // Allow either the item itself to be a link or contain a link
     const link = item.tagName === 'A' ? item : item.querySelector('a');
     const href = link ? link.getAttribute('href') : null;
     if (href && href === currentPage) {
@@ -25,4 +24,20 @@ document.addEventListener('DOMContentLoaded', () => {
       item.classList.remove('active');
     }
   });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebarContainer = document.getElementById('sidebarContainer');
+  if (sidebarContainer) {
+    fetch('sidebar.html')
+      .then(r => r.text())
+      .then(html => {
+        sidebarContainer.outerHTML = html; // replace placeholder with actual sidebar markup
+        initSidebarFeatures();
+      })
+      .catch(err => console.error('Sidebar load failed:', err));
+  } else {
+    // If page already has sidebar (e.g., legacy), just init features
+    initSidebarFeatures();
+  }
 });
