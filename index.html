@@ -11,152 +11,110 @@
 </head>
 <body>
     <div class="container">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <h1>AI/ML Blogs</h1>
-                <p class="subtitle">Exploring the Future of Technology</p>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>AI/ML Blogs - Home</title>
+            <link rel="stylesheet" href="style.css">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+        </head>
+        <body>
+            <div class="container">
+                <aside class="sidebar">
+                    <div class="sidebar-header">
+                        <h1>AI/ML Blogs</h1>
+                        <p class="subtitle">Exploring the Future of Technology</p>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" id="searchVlogs" placeholder="Search blogs...">
+                    </div>
+                    <div class="vlogs-list" id="blogsList">
+                        <a class="vlog-item" href="blog-how-llms-generate-text.html">
+                            <div class="vlog-number">01</div>
+                            <div class="vlog-info">
+                                <h3>How LLMs Generate Text</h3>
+                                <span class="vlog-date">Nov 16, 2025</span>
+                            </div>
+                        </a>
+                        <a class="vlog-item" href="blog-deep-learning-fundamentals.html">
+                            <div class="vlog-number">02</div>
+                            <div class="vlog-info">
+                                <h3>Deep Learning Fundamentals</h3>
+                                <span class="vlog-date">Nov 12, 2025</span>
+                            </div>
+                        </a>
+                        <a class="vlog-item" href="blog-computer-vision-cnns.html">
+                            <div class="vlog-number">03</div>
+                            <div class="vlog-info">
+                                <h3>Computer Vision & CNNs</h3>
+                                <span class="vlog-date">Nov 14, 2025</span>
+                            </div>
+                        </a>
+                        <a class="vlog-item" href="blog-natural-language-processing.html">
+                            <div class="vlog-number">04</div>
+                            <div class="vlog-info">
+                                <h3>Natural Language Processing</h3>
+                                <span class="vlog-date">Nov 15, 2025</span>
+                            </div>
+                        </a>
+                        <a class="vlog-item" href="blog-transformer-architecture.html">
+                            <div class="vlog-number">05</div>
+                            <div class="vlog-info">
+                                <h3>Transformer Architecture</h3>
+                                <span class="vlog-date">Nov 16, 2025</span>
+                            </div>
+                        </a>
+                        <a class="vlog-item" href="blog-reinforcement-learning-basics.html">
+                            <div class="vlog-number">06</div>
+                            <div class="vlog-info">
+                                <h3>Reinforcement Learning Basics</h3>
+                                <span class="vlog-date">Coming Soon</span>
+                            </div>
+                        </a>
+                    </div>
+                </aside>
+                <main class="main-content">
+                    <div class="content-header">
+                        <div class="breadcrumb"><span>Home</span> / <span>Blogs</span></div>
+                        <div class="actions">
+                            <a href="https://colab.research.google.com/github/Harshadgore096/aiml/blob/master/howLLmgenerateText.ipynb" target="_blank" class="btn-colab">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z" fill="#F9AB00"/>
+                                    <path d="M7 10.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5zm10 0c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z" fill="#F9AB00"/>
+                                </svg>
+                                Open Notebook in Colab
+                            </a>
+                        </div>
+                    </div>
+                    <article class="vlog-content">
+                        <div class="vlog-header">
+                            <h1 class="vlog-title">Welcome to AI/ML Blogs</h1>
+                            <p class="vlog-subtitle">Select a blog from the left to read the full article.</p>
+                        </div>
+                        <div class="vlog-body">
+                            <section class="content-section">
+                                <h2>About This Collection</h2>
+                                <p>This site hosts a growing collection of practical AI & ML blog posts. Each article focuses on clarity, code, and real-world intuition. Start with the first post <strong>"How LLMs Generate Text"</strong> for a complete walkthrough from tokenization to sampling.</p>
+                            </section>
+                            <section class="content-section">
+                                <h2>Featured Post</h2>
+                                <div class="highlight-box">
+                                    <h4>How LLMs Generate Text</h4>
+                                    <p>Dive deep into the internals of large language models: tokens, logits, temperature, top-k sampling, and iterative generation. Includes the full runnable notebook.</p>
+                                    <p><a href="blog-how-llms-generate-text.html" class="btn-primary" style="display:inline-block;margin-top:0.75rem;text-decoration:none;">Read Full Blog →</a></p>
+                                </div>
+                            </section>
+                        </div>
+                    </article>
+                </main>
             </div>
-            
-            <div class="search-box">
-                <input type="text" id="searchVlogs" placeholder="Search blogs...">
-            </div>
-
-            <div class="vlogs-list">
-                <div class="vlog-item active" data-vlog="1">
-                    <div class="vlog-number">01</div>
-                    <div class="vlog-info">
-                        <h3>How LLMs Generate Text</h3>
-                        <span class="vlog-date">Nov 16, 2025</span>
-                    </div>
-                </div>
-
-                <div class="vlog-item" data-vlog="2">
-                    <div class="vlog-number">02</div>
-                    <div class="vlog-info">
-                        <h3>Deep Learning Fundamentals</h3>
-                        <span class="vlog-date">Nov 12, 2025</span>
-                    </div>
-                </div>
-
-                <div class="vlog-item" data-vlog="3">
-                    <div class="vlog-number">03</div>
-                    <div class="vlog-info">
-                        <h3>Computer Vision & CNNs</h3>
-                        <span class="vlog-date">Nov 14, 2025</span>
-                    </div>
-                </div>
-
-                <div class="vlog-item" data-vlog="4">
-                    <div class="vlog-number">04</div>
-                    <div class="vlog-info">
-                        <h3>Natural Language Processing</h3>
-                        <span class="vlog-date">Nov 15, 2025</span>
-                    </div>
-                </div>
-
-                <div class="vlog-item" data-vlog="5">
-                    <div class="vlog-number">05</div>
-                    <div class="vlog-info">
-                        <h3>Transformer Architecture</h3>
-                        <span class="vlog-date">Nov 16, 2025</span>
-                    </div>
-                </div>
-
-                <div class="vlog-item" data-vlog="6">
-                    <div class="vlog-number">06</div>
-                    <div class="vlog-info">
-                        <h3>Reinforcement Learning Basics</h3>
-                        <span class="vlog-date">Coming Soon</span>
-                    </div>
-                </div>
-            </div>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="content-header">
-                <div class="breadcrumb">
-                    <span>Home</span> / <span>Blogs</span> / <span class="current-vlog">How LLMs Generate Text</span>
-                </div>
-                <div class="actions">
-                    <a href="https://colab.research.google.com/github/Harshadgore096/aiml/blob/master/howLLmgenerateText.ipynb" target="_blank" class="btn-colab">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 22C6.48 22 2 17.52 2 12S6.48 2 12 2s10 4.48 10 10-4.48 10-10 10z" fill="#F9AB00"/>
-                            <path d="M7 10.5c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5zm10 0c-1.38 0-2.5 1.12-2.5 2.5s1.12 2.5 2.5 2.5 2.5-1.12 2.5-2.5-1.12-2.5-2.5-2.5z" fill="#F9AB00"/>
-                        </svg>
-                        Open in Colab
-                    </a>
-                </div>
-            </div>
-
-            <article class="vlog-content" id="vlogContent">
-                <div class="vlog-header">
-                    <div class="vlog-meta">
-                        <span class="badge">Large Language Models</span>
-                        <span class="reading-time">15 min read</span>
-                    </div>
-                    <h1 class="vlog-title">How LLMs Generate Text</h1>
-                    <p class="vlog-subtitle">A deep dive into tokenization, logits, and sampling strategies</p>
-                    <div class="author-info">
-                        <div class="author-avatar">HG</div>
-                        <div class="author-details">
-                            <p class="author-name">Harshad Gore</p>
-                            <p class="publish-date">Published on November 16, 2025</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="vlog-body">
-                    <section class="hero-image">
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="AI Text Generation Visualization" />
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Introduction</h2>
-                        <p>Ever wondered how ChatGPT, Claude, or other language models generate text? In this comprehensive tutorial, we'll demystify the entire process by building a text generator from scratch using the SmolLM2 model. By the end, you'll understand tokenization, logits, sampling strategies, and how to generate creative text!</p>
-                        
-                        <div class="highlight-box">
-                            <h4>Complete Python Notebook</h4>
-                            <p>This blog includes all the code from our Python notebook. You can run it yourself by clicking "Open in Colab" above!</p>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Step 1: Setting Up the Model</h2>
-                        <p>First, let's import the necessary libraries and load our language model. We'll use SmolLM2-135M-Instruct, a lightweight but powerful model perfect for learning.</p>
-                        
-                        <div class="code-block">
-                            <pre><code>from transformers import AutoModelForCausalLM, AutoTokenizer
-
-model_name = 'HuggingFaceTB/SmolLM2-135M-Instruct'
-tokenizer = AutoTokenizer.from_pretrained(model_name)
-model = AutoModelForCausalLM.from_pretrained(model_name)</code></pre>
-                        </div>
-                    </section>
-
-                    <section class="content-section">
-                        <h2>Step 2: Understanding Tokenization</h2>
-                        <p>Tokenization is a fundamental step in text processing and NLP. A tokenizer breaks down text into smaller, meaningful units called "tokens." Think of it like taking a sentence and splitting it into individual words, or even smaller pieces.</p>
-                        
-                        <p>For example, the sentence "Hello, world!" might be tokenized into:</p>
-                        <ul class="custom-list">
-                            <li>["Hello", ",", "world", "!"] (word-level tokens)</li>
-                            <li>Or even ["Hel", "lo", ",", "wor", "ld", "!"] (subword tokens)</li>
-                        </ul>
-
-                        <div class="code-block">
-                            <pre><code>text = "My Name is Harshad "
-tokens = tokenizer(text)
-tokens
-# Output: {'input_ids': [1926, 3973, 310, 4095, 845, 328], 'attention_mask': [1, 1, 1, 1, 1, 1]}</code></pre>
-                        </div>
-
-                        <div class="highlight-box">
-                            <h4>Understanding the Output</h4>
-                            <p><strong>input_ids:</strong> These are the numerical IDs that represent each token - this is what the model actually processes<br>
-                            <strong>attention_mask:</strong> Other inputs required for the model (we can ignore this for now)</p>
-                        </div>
+            <script src="script.js"></script>
+        </body>
+        </html>
 
                         <div class="code-block">
                             <pre><code># To get back token strings from the tokens

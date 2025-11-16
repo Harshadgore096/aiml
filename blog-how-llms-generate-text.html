@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How LLMs Generate Text - AI/ML Blogs</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>AI/ML Blogs</h1>
+        <p class="subtitle">Exploring the Future of Technology</p>
+      </div>
+      <div class="search-box">
+        <input type="text" id="searchVlogs" placeholder="Search blogs..." />
+      </div>
+      <div class="vlogs-list" id="blogsList">
+        <a class="vlog-item active" href="blog-how-llms-generate-text.html"><div class="vlog-number">01</div><div class="vlog-info"><h3>How LLMs Generate Text</h3><span class="vlog-date">Nov 16, 2025</span></div></a>
+        <a class="vlog-item" href="blog-deep-learning-fundamentals.html"><div class="vlog-number">02</div><div class="vlog-info"><h3>Deep Learning Fundamentals</h3><span class="vlog-date">Nov 12, 2025</span></div></a>
+        <a class="vlog-item" href="blog-computer-vision-cnns.html"><div class="vlog-number">03</div><div class="vlog-info"><h3>Computer Vision & CNNs</h3><span class="vlog-date">Nov 14, 2025</span></div></a>
+        <a class="vlog-item" href="blog-natural-language-processing.html"><div class="vlog-number">04</div><div class="vlog-info"><h3>Natural Language Processing</h3><span class="vlog-date">Nov 15, 2025</span></div></a>
+        <a class="vlog-item" href="blog-transformer-architecture.html"><div class="vlog-number">05</div><div class="vlog-info"><h3>Transformer Architecture</h3><span class="vlog-date">Nov 16, 2025</span></div></a>
+        <a class="vlog-item" href="blog-reinforcement-learning-basics.html"><div class="vlog-number">06</div><div class="vlog-info"><h3>Reinforcement Learning Basics</h3><span class="vlog-date">Coming Soon</span></div></a>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="content-header">
+        <div class="breadcrumb"><a href="index.html" style="color:var(--text-secondary);text-decoration:none;">Home</a> / <span>Blogs</span> / <span class="current-vlog">How LLMs Generate Text</span></div>
+        <div class="actions">
+          <a href="https://colab.research.google.com/github/Harshadgore096/aiml/blob/master/howLLmgenerateText.ipynb" target="_blank" class="btn-colab">Open in Colab</a>
+        </div>
+      </div>
+      <article class="vlog-content">
+        <div class="vlog-header">
+          <div class="vlog-meta">
+            <span class="badge">Large Language Models</span>
+            <span class="reading-time">15 min read</span>
+          </div>
+          <h1 class="vlog-title">How LLMs Generate Text</h1>
+          <p class="vlog-subtitle">A deep dive into tokenization, logits, sampling, and generation.</p>
+          <div class="author-info">
+            <div class="author-avatar">HG</div>
+            <div class="author-details">
+              <p class="author-name">Harshad Gore</p>
+              <p class="publish-date">Published on November 16, 2025</p>
+            </div>
+          </div>
+        </div>
+        <div class="vlog-body">
+          <section class="hero-image"><img src="llm.png" alt="LLM generation flow" /></section>
+          <section class="content-section">
+            <h2>Introduction</h2>
+            <p>Ever wondered how ChatGPT or other language models generate text? This post recreates the full pipeline from raw text to generated output using a compact open model. We'll walk through tokenization, tensor preparation, logits interpretation, greedy vs sampling methods, and iterative generation.</p>
+            <div class="highlight-box">
+              <h4>Notebook Source</h4>
+              <p>This blog mirrors the full Colab notebook. All code blocks below are runnable as-is inside the linked environment.</p>
+            </div>
+          </section>
+          <section class="content-section">
+            <h2>1. Model & Tokenizer Setup</h2>
+            <div class="code-block"><pre><code>from transformers import AutoModelForCausalLM, AutoTokenizer
+model_name = 'HuggingFaceTB/SmolLM2-135M-Instruct'
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForCausalLM.from_pretrained(model_name)</code></pre></div>
+          </section>
+          <section class="content-section">
+            <h2>2. Tokenization Basics</h2>
+            <p>Tokenization breaks text into smaller units (tokens). Modern subword tokenizers learn frequent patterns so they can represent rare words as combinations of known segments.</p>
+            <div class="code-block"><pre><code>""" Next Step Tokenization
+Tokenization is a fundamental step in text processing and natural language processing (NLP). A tokenizer breaks down text into smaller, meaningful units called "tokens." Think of it like taking a sentence and splitting it into individual words, or even smaller pieces depending on your needs. For example, the sentence "Hello, world!" might be tokenized into:
+["Hello", ",", "world", "!"] (word-level tokens)
+Or even ["Hel", "lo", ",", "wor", "ld", "!"] (subword tokens)"""
+text = "My Name is Harshad "
+tokens = tokenizer(text)
+tokens  # dict with input_ids & attention_mask</code></pre></div>
+            <div class="code-block"><pre><code>"""1>input_ids: These are the numerical IDs that represent each token - this is what the model actually processes
+   2>attention_mask: Other inputs required for the model, let's ignore it for now"""</code></pre></div>
+            <div class="code-block"><pre><code># Recover token strings
+[tokenizer.decode([token_id]) for token_id in tokens['input_ids']]</code></pre></div>
+            <div class="highlight-box"><h4>Subword Insight</h4><p>Words like "harshad" may split into ' harsh' + 'ad'. This enables handling rare words while keeping the vocabulary compact.</p></div>
+          </section>
+          <section class="content-section">
+            <h2>3. Inspecting Vocabulary & Special Tokens</h2>
+            <div class="code-block"><pre><code>print(tokenizer.special_tokens_map)
+print(tokenizer.vocab_size)</code></pre></div>
+          </section>
+          <section class="content-section">
+            <h2>4. Forward Pass & Logits</h2>
+            <p>Logits are raw scores for each possible next token. Shape encodes batch size, sequence length, and vocabulary size.</p>
+            <div class="code-block"><pre><code>import torch
+input_tensor = torch.tensor([tokens['input_ids']])  # model expects tensor
+op = model(input_tensor)
+op.logits.shape  # torch.Size([1, sequence_len, vocab_size])</code></pre></div>
+            <div class="code-block"><pre><code>""" its really intresting that why so many numbers? 49,152 might seem like overkill, but remember - the model has to consider EVERY possible token it knows. This includes common words like "happy", rare words like "sesquipedalian", numbers, punctuation, and even tokens from other languages. Most will have very low scores, but the model still evaluates them all."""</code></pre></div>
+            <div class="code-block"><pre><code>print(f"Logits shape: {op.logits.shape}")
+print("Shape breakdown: [Batch_size, Sequence_length, Vocab_size]")
+print(f"[{op.logits.shape[0]}, {op.logits.shape[1]}, {op.logits.shape[2]}]")
+print(f"- Batch: {op.logits.shape[0]} text(s) processed")
+print(f"- Sequence: {op.logits.shape[1]} tokens in input")
+print(f"- Vocab: {op.logits.shape[2]:,} possible next tokens")</code></pre></div>
+          </section>
+          <section class="content-section">
+            <h2>5. Greedy Next Token</h2>
+            <div class="code-block"><pre><code># Last position logits
+last_token_logits = op.logits[:, -1, :]
+predicted_token_id = last_token_logits.argmax(dim=-1)
+next_token = tokenizer.decode(predicted_token_id)
+print(f"predicted_token_id : {predicted_token_id.item()}")
+print(f"next token : `{next_token}`")</code></pre></div>
+          </section>
+          <section class="content-section">
+            <h2>6. Why Sampling?</h2>
+            <div class="code-block"><pre><code>"""The Art of Selection: Why Randomness Matters
+If we always pick the highest logit score (greedy) results are predictable.
+Sampling introduces controlled randomness via temperature & top-k."""</code></pre></div>
+            <div class="code-block"><pre><code>import torch.nn.functional as F
+
+def generate_next_token(text, temperature=1.0, top_k=50):
+    """Simple function to show one step of text generation"""
+    tokens = tokenizer(text, return_tensors="pt")
+    with torch.no_grad():
+        outputs = model(**tokens)
+    next_token_logits = outputs.logits[0, -1, :] / temperature
+    top_logits, top_indices = torch.topk(next_token_logits, top_k)
+    probs = F.softmax(top_logits, dim=-1)
+    next_token_idx = torch.multinomial(probs, 1)
+    next_token_id = top_indices[next_token_idx]
+    return tokenizer.decode(next_token_id)</code></pre></div>
+            <div class="code-block"><pre><code>[generate_next_token("my name is harshad", 0.7) for _ in range(6)]</code></pre></div>
+          </section>
+          <section class="content-section">
+            <h2>7. Full Text Generation Loop</h2>
+            <div class="code-block"><pre><code>def generate_text(prompt, max_tokens=10):
+    current_text = prompt
+    for i in range(max_tokens):
+        next_token = generate_next_token(current_text, temperature=0.7)
+        current_text += next_token
+        print(f"Step {i+1}: {current_text}")
+    return current_text
+
+text = "My Name is Harshad "
+final = generate_text(text, 4)
+print(final)</code></pre></div>
+            <div class="code-block"><pre><code>""" Thats all its just that simple"""</code></pre></div>
+          </section>
+          <section class="content-section">
+            <h2>Applications</h2>
+            <div class="grid-cards">
+              <div class="card"><h3>💬 Chatbots</h3><p>Conversational agents with dynamic responses.</p></div>
+              <div class="card"><h3>✍️ Content Creation</h3><p>Blogs, emails, and creative drafting.</p></div>
+              <div class="card"><h3>🔧 Code Assist</h3><p>Autocompletion & inline help.</p></div>
+              <div class="card"><h3>🌐 Translation</h3><p>Natural multi-language support.</p></div>
+            </div>
+          </section>
+          <section class="content-section">
+            <h2>Key Takeaways</h2>
+            <ul class="custom-list">
+              <li><strong>Tokenization:</strong> Converts raw text into model-ready pieces.</li>
+              <li><strong>Logits:</strong> Raw scores over entire vocabulary.</li>
+              <li><strong>Greedy vs Sampling:</strong> Deterministic vs creative generation.</li>
+              <li><strong>Temperature & Top-k:</strong> Control diversity and quality.</li>
+              <li><strong>Iteration:</strong> Generation builds text one token at a time.</li>
+            </ul>
+          </section>
+        </div>
+        <div class="vlog-footer">
+          <div class="tags">
+            <span class="tag">#LLM</span><span class="tag">#TextGeneration</span><span class="tag">#Tokenization</span><span class="tag">#AI</span><span class="tag">#MachineLearning</span>
+          </div>
+          <div class="navigation-buttons">
+            <button class="nav-btn" onclick="location.href='index.html'">← Back Home</button>
+            <button class="nav-btn" onclick="location.href='blog-deep-learning-fundamentals.html'">Next →</button>
+          </div>
+        </div>
+      </article>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
